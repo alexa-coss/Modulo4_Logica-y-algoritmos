@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Práctica 1</title>
+</head>
+<body>
+    <header>
+        <h1>Práctica 1. Introducción a ECMAScript</h1>
+    </header>
+
+    <h2>Planificador de viajes</h2>
+
+    <p>
+        En esta práctica puedes planificar un viaje y se te darán los costos de manera individual. Se proporciona: nombre del usuario, origen, destino, ciudad, fecha y transporte. <br>
+        Posibles opciones a elegir en este planificador:
+    </p>
+
+    <ul class="datos">
+        <li><b>Nombre del usuario:</b> se recomienda al menos un nombre y un apellido.</li>
+        <li><b>Continente de origen:</b> América, Europa, Asia, África, Oceanía.</li>
+        <li><b>Continente de destino:</b> América, Europa, Asia, África, Oceanía.</li>
+        <li><b>Ciudad destino:</b> CDMX, Bogotá, Rio de Janeiro, New York, Paris, Londres, Roma, Tokyo, El Cairo, Sídney.</li>
+        <li><b>Fecha:</b> la deseada en formato "año-mes-día".</li>
+        <li><b>Medio de transporte:</b> Avión, Tren, Auto, Medios propios.</li>
+    </ul>
+
+    <p><b>Notas:</b></p>
+
+    <ul>
+        <li>En caso de seleccionar "Medios propios", no se agregará el costo del transporte al costo final.</li>
+        <li>Seleccionar el transporte "Avión" si el destino u origen son América u Oceanía (no necesario si ambos son del mismo continente).</li>
+        <li>Verificar que el continente destino y la ciudad destino son correctos.</li>
+    </ul>
+
+    <h3>Pruebas</h3>
+
+    <h4>Se registran cuatro usuarios en el planificador.</h4>
+    <p>Itinerario mostrado:</p>
+    <figure>
+        <img src="https://i.postimg.cc/0y0hLDk7/Pruebas.jpg" alt="Itinerario">
+        <figcaption>Itinerario con cuatro usuarios registrados.</figcaption>
+    </figure>
+
+    <footer>
+        <p>&copy; 2025 Planificador de viajes</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
