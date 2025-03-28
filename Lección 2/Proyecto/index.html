@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Práctica 2</title>
+</head>
+<body>
+    <header>
+        <h1>Práctica 2. Estructuras de Datos</h1>
+    </header>
+
+    <h2>Gestión de Lista de Compras</h2>
+
+    <p>En esta página puedes crear una lista de compras, con las opciones:</p>
+    
+    <ul id="datos">
+        <li>Agregar producto.</li>
+        <li>Eliminar producto.</li>
+        <li>Ver los productos agregados.</li>
+    </ul>
+
+    <main>
+        <!-- Gestión de Lista de Compras -->
+        <section aria-labelledby="formulario-compras">  <!-- Dar un poco más de contexto, sobre todo a personas con baja visión que usan ayudas. -->
+            <h3 id="Formulario-compras">Gestión de Lista de Compras</h3>
+            <form id="compras-form">
+                <label for="nombre">Nombre del Producto:</label>
+                <input type="text" id="nombre" required>
+
+                <label for="precio">Precio:</label>
+                <input type="number" id="precio" required min="1">  <!-- Precio minímo de $1 -->
+
+                <label for="categoria">Categoría:</label>
+                <select id="categoria">
+                    <option value="" disabled selected>Estado</option>
+                    <option value="Alimentos">Alimentos</option>
+                    <option value="Bebidas">Bebidas</option>
+                    <option value="Limpieza">Limpieza</option>
+                    <option value="Muebles">Hogar</option>
+                    <option value="Higiene personal">Personal</option>
+                    <option value="Ropa">Ropa</option>
+                    <option value="Calzado">Calzado</option>
+                    <option value="Tecnologia">Tecnología</option>
+                    <option value="Herramientas">Herramientas</option>
+                    <option value="Ropa">Otro</option>
+                </select>
+
+                <button type="submit">Agregar Producto</button>
+            </form>
+
+            <!-- Lista de Compras -->
+            <section aria-labelledby="lista-de-compras">
+                <h2 id="Lista-compras">Lista de Compras</h2>
+                <ul id="lista-compras"></ul>
+            </section>
+            </section>
+    </main>
+
+    <section id="modal" class="modal-overlay">
+        <span id="modal-text"></span>
+        <button onclick="cerrarModal()">Cerrar</button>  <!-- Cerrar la modal -->
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Gestión de Lista de Compras</p>
+    </footer>
+
+    <h3>Pruebas</h3>
+
+    <h4>Lo que podemos hacer en el Passwords Generator</h4>
+    <p>Vista incial al abrir la página:</p>
+    <figure>
+        <img src="https://i.postimg.cc/TYJ6KJL0/1-Inicial.jpg" alt="Vista preterminad">
+        <figcaption>Vista preterminada.</figcaption>
+    </figure>
+
+    <p>Elegir la longitud de los caracteres deslizando el cursor por la barra y seleccionar al menos una de las opciones:</p>
+    <figure>
+        <img src="https://i.postimg.cc/Jz7WZHjL/2.jpg" alt="Cambiar longitud de caracteres y seleccionar opciones">
+        <figcaption>Cambiar longitud de caracteres y seleccionar opciones.</figcaption>
+    </figure>
+
+    <p>Dar click en el botón "Generate password" para generar una nueva contraseña:</p>
+    <figure>
+        <img src="https://i.postimg.cc/s2qFknqj/3.jpg" alt="Crear contraseña "Generate password"">
+        <figcaption>Crear contraseña "Generate password".</figcaption>
+    </figure>
+
+    <p>Obtenermos una nueva contraseña con los parametros establecidos:</p>
+    <figure>
+        <img src="https://i.postimg.cc/9QxHpXBq/4.jpg" alt="Visualizar nueva contraseña">
+        <figcaption>Visualizar nueva contraseña.</figcaption>
+    </figure>
+
+    <p>Dar click en el botón "📋" para copiar la contraseña:</p>
+    <figure>
+        <img src="https://i.postimg.cc/0NbRHgtX/5.jpg" alt="Copiar contraseña "📋"">
+        <figcaption>Copiar contraseña "📋".</figcaption>
+    </figure>
+
+    <h4>Probando contraseñas con dierentes combinaciones y niveles de seguridad</h4>
+    <p>Longitud de 12 caracteres, con al  menos una mayúscula y una minúscula:</p>
+    <figure>
+        <img src="https://i.postimg.cc/FzXMRYhw/6.jpg" alt="Contraseña débil">
+        <figcaption>Contraseña débil.</figcaption>
+    </figure>
+
+    <p>Longitud de 15 caracteres, con al  menos una mayúscula, una minúscula y un número:</p>
+    <figure>
+        <img src="https://i.postimg.cc/Y9FcM6B1/7.jpg" alt="Contraseña media">
+        <figcaption>Contraseña media.</figcaption>
+    </figure>
+
+    <p>Longitud de 18 caracteres, con al  menos una mayúscula, una minúscula, un número y un símbolo especial:</p>
+    <figure>
+        <img src="https://i.postimg.cc/rsGvtqms/8.jpg" alt="Contraseña fuerte">
+        <figcaption>Contraseña fuerte.</figcaption>
+    </figure>
+
+    <script src="script.js"></script>
+</body>
+</html>
