@@ -24,11 +24,27 @@ let listaDeCompras = [];
 
 
 // Función de agregar producto al final de la lista
-const agregarProducto = (producto) => {
+const agregarProducto = () => {
+    //// Obtener valores del formulario
+    const nombre = document.getElementById("nombre").value.trim(); //.trim() - eliminar espacios innecesarios.
+    const precio = parseFloat(document.getElementById("precio").value); // parseFloat() - para verlo como número y por si tiene decimales.
+    const categoria = document.getElementById("categoria").value; // .value -> solo obtengo el valor (lo que está dentro del input).
+
+    // Verificar valores vacíos o incorrectos
+    if (!nombre || isNaN(precio) || !categoria) { // "nombre" y "precio" están vacíos y "precio" no es número.
+        mostrarModal('Por favor, completa todos los campos para añadir un producto.');
+        return;
+    }
+
+    // Crear un objeto producto
+    const producto = { nombre, precio, categoria };
+
     // Verificar si el producto ya está en la lista
-    if (!listaDeCompras.includes(producto)) {
+    const existe = listaDeCompras.some(p => p.nombre === producto.nombre);
+
+    if (!existe) {
         listaDeCompras.push(producto);
-        mostrarLista(); // Actualizar lista.
+        mostrarLista();
     } else {
         mostrarModal("Este producto ya está en la lista.");
     }
@@ -36,15 +52,10 @@ const agregarProducto = (producto) => {
 
 
 // Función de eliminar producto
-const eliminarProducto = (producto) => {
-    const index = listaDeCompras.indexOf(producto); // Buscamos el índice.
-    if(index !== -1){ // Si existe el elemento.
-        listaDeCompras.splice(index,1); // Eliminamos por índice.
-        mostrarModal(`Producto "${producto}" eliminado.`);
-        mostrarLista(); // Actualizar lista.
-    } else {
-        mostrarModal("Este producto no está en la lista.");
-    }
+const eliminarProducto = (index) => {
+    listaDeCompras.splice(index,1);
+    mostrarLista();
+    mostrarModal("Este producto se eliminó de la lista.");
 }
 
 
@@ -53,33 +64,47 @@ const mostrarLista = () => {
     const listaElement = document.getElementById('lista-compras');
     listaElement.innerHTML = ''; // Limpiar lista actual.
 
-    // Recorrer lista y agregarlos
-    listaDeCompras.forEach((producto) => {
+    // Recorrer lista y agregar productos
+    listaDeCompras.forEach((producto, index) => {
         const li = document.createElement('li'); // Crear nuevo elemento li.
-        li.textContent = producto; // Asigna nombre del producto como texto dentro del <li>.
+        li.innerHTML  = `${producto.nombre} - $${producto.precio} <br> <span class="categoria">| Categoría: ${producto.categoria}</span>`;
+
+        // Button de eliminar (en cada producto)
+        const botonEliminar = document.createElement('button');
+            botonEliminar.textContent = 'Eliminar';
+            botonEliminar.classList.add('eliminar'); // Agregar la clase 'eliminar'
+            botonEliminar.onclick = () => eliminarProducto(index);
+
+        li.appendChild(botonEliminar); // Agregar button al li.
         listaElement.appendChild(li); // Agregar el li en #lista-compras.
+
+        // Verificar si el botón se está creando correctamente
+        console.log(botonEliminar); // Debería imprimir el botón en la consola.
     });
 }
 
 
+// Función para mostrar el modal con el mensaje
+const mostrarModal = (mensaje) => {
+    const modal = document.getElementById('modal');
+    const modalText = document.getElementById('modal-text');
+
+    modalText.textContent = mensaje; // Establecer mensaje.
+    modal.style.display = 'block'; // Mostrar modal.
+};
+
+
+// Función para cerrar el modal
+const cerrarModal = () => {
+    const modal = document.getElementById('modal');
+    modal.style.display = 'none'; // Ocultar modal.
+};
+
+
 // Evento para manejar la adición de productos
 document.getElementById('compras-form').addEventListener('submit', (event) => {
-    event.preventDefault(); // Prevenir el envío del formulario (que se refresque la pantalla).
+    event.preventDefault(); // Prevenir el envío del formulario (que se refresque la pantalla)
 
-    // Obtener valores del formulario
-    const nombreProducto = document.getElementById('nombre').value;
-    const precioProducto = document.getElementById('precio').value;
-    const categoriaProducto = document.getElementById('categoria').value;
-
-    if (nombreProducto && precioProducto && categoriaProducto) { // Verificar que todos los campos tengan un valor.
-        const producto = `${nombreProducto} - $${precioProducto} | Categoría: ${categoriaProducto}`;
-        agregarProducto(producto); // Agregar producto a la lista.
-
-        // Limpiar los campos después de agregar producto
-        document.getElementById('nombre').value = '';
-        document.getElementById('precio').value = '';
-        document.getElementById('categoria').value = '';
-    } else {
-        alert('Por favor, completa todos los campos para añadir un producto.');
-    }
+    agregarProducto();
+    document.getElementById('compras-form').reset(); // Limpiar el formulario.
 });

@@ -16,8 +16,8 @@
     <p>En esta página puedes crear una lista de compras, con las opciones:</p>
     
     <ul id="datos">
-        <li>Agregar producto.</li>
-        <li>Eliminar producto.</li>
+        <li>Agregar un producto.</li>
+        <li>Eliminar un producto.</li>
         <li>Ver los productos agregados.</li>
     </ul>
 
@@ -44,7 +44,7 @@
                     <option value="Calzado">Calzado</option>
                     <option value="Tecnologia">Tecnología</option>
                     <option value="Herramientas">Herramientas</option>
-                    <option value="Ropa">Otro</option>
+                    <option value="Otro">Otro</option>
                 </select>
 
                 <button type="submit">Agregar Producto</button>
@@ -58,9 +58,11 @@
             </section>
     </main>
 
-    <section id="modal" class="modal-overlay">
-        <span id="modal-text"></span>
-        <button onclick="cerrarModal()">Cerrar</button>  <!-- Cerrar la modal -->
+    <section id="modal" class="modal-overlay" style="display: none;">
+        <section class="modal">
+            <p id="modal-text"></p>
+            <button onclick="cerrarModal()">Cerrar</button>  <!-- Cerrar la modal -->
+        </section>
     </section>
 
     <footer>
@@ -69,54 +71,46 @@
 
     <h3>Pruebas</h3>
 
-    <h4>Lo que podemos hacer en el Passwords Generator</h4>
+    <h4>Lo que podemos ver en la Gestión de Lista de Compras</h4>
     <p>Vista incial al abrir la página:</p>
     <figure>
-        <img src="https://i.postimg.cc/TYJ6KJL0/1-Inicial.jpg" alt="Vista preterminad">
+        <img src="https://i.postimg.cc/CLFjW0SX/1-Vista-preterminada.jpg" alt="Vista preterminada">
         <figcaption>Vista preterminada.</figcaption>
     </figure>
 
-    <p>Elegir la longitud de los caracteres deslizando el cursor por la barra y seleccionar al menos una de las opciones:</p>
+    <h4>Probando la funcionalidad del gestor</h4>
+
+    <p>Mensaje de completar campo:</p>
     <figure>
-        <img src="https://i.postimg.cc/Jz7WZHjL/2.jpg" alt="Cambiar longitud de caracteres y seleccionar opciones">
-        <figcaption>Cambiar longitud de caracteres y seleccionar opciones.</figcaption>
+        <img src="https://i.postimg.cc/2824Yt56/2-Completar-campo.jpg" alt="Completar campo">
+        <figcaption>Completar primer o segundo campo.</figcaption>
     </figure>
 
-    <p>Dar click en el botón "Generate password" para generar una nueva contraseña:</p>
     <figure>
-        <img src="https://i.postimg.cc/s2qFknqj/3.jpg" alt="Crear contraseña "Generate password"">
-        <figcaption>Crear contraseña "Generate password".</figcaption>
+        <img src="https://i.postimg.cc/Dw01wcWc/3-Completar-campo.jpg" alt="Completar campo">
+        <figcaption>Completar tercer campo.</figcaption>
     </figure>
 
-    <p>Obtenermos una nueva contraseña con los parametros establecidos:</p>
+    <p>Agregar productos:</p>
     <figure>
-        <img src="https://i.postimg.cc/9QxHpXBq/4.jpg" alt="Visualizar nueva contraseña">
-        <figcaption>Visualizar nueva contraseña.</figcaption>
+        <img src="https://i.postimg.cc/3xqm4DmQ/4-Agregar-producto.jpg" alt="Agregar producto">
+        <figcaption>Agregar producto.</figcaption>
     </figure>
 
-    <p>Dar click en el botón "📋" para copiar la contraseña:</p>
     <figure>
-        <img src="https://i.postimg.cc/0NbRHgtX/5.jpg" alt="Copiar contraseña "📋"">
-        <figcaption>Copiar contraseña "📋".</figcaption>
+        <img src="https://i.postimg.cc/YSmg1qzG/5-Agregar-producto.jpg" alt="Agregar otro producto">
+        <figcaption>Agregar otro producto.</figcaption>
     </figure>
 
-    <h4>Probando contraseñas con dierentes combinaciones y niveles de seguridad</h4>
-    <p>Longitud de 12 caracteres, con al  menos una mayúscula y una minúscula:</p>
+    <p>Eliminar producto:</p>
     <figure>
-        <img src="https://i.postimg.cc/FzXMRYhw/6.jpg" alt="Contraseña débil">
-        <figcaption>Contraseña débil.</figcaption>
+        <img src="https://i.postimg.cc/26RWTR0H/5-Eliminar-producto.jpg" alt="Eliminar producto">
+        <figcaption>Eliminar producto.</figcaption>
     </figure>
 
-    <p>Longitud de 15 caracteres, con al  menos una mayúscula, una minúscula y un número:</p>
     <figure>
-        <img src="https://i.postimg.cc/Y9FcM6B1/7.jpg" alt="Contraseña media">
-        <figcaption>Contraseña media.</figcaption>
-    </figure>
-
-    <p>Longitud de 18 caracteres, con al  menos una mayúscula, una minúscula, un número y un símbolo especial:</p>
-    <figure>
-        <img src="https://i.postimg.cc/rsGvtqms/8.jpg" alt="Contraseña fuerte">
-        <figcaption>Contraseña fuerte.</figcaption>
+        <img src="https://i.postimg.cc/xCvz4x79/6-Eliminar-producto.jpg" alt="Mensaje confirmar eliminar producto">
+        <figcaption>Mensaje para confirmar eliminar producto.</figcaption>
     </figure>
 
     <script src="script.js"></script>
