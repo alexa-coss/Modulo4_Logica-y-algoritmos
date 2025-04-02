@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Práctica 3</title>
+</head>
+<body>
+    <header>
+        <h1>Práctica 3. Métodos de Arreglos</h1>
+    </header>
+
+    <h2>Problema: Filtro y Orden de Productos de una Tienda Online</h2>
+
+    <p>En esta Práctica se tendrán diferentes productos con la información: nombre, precio y categoría, se podrá:</p>
+    
+    <ul id="datos">
+        <li>Obtener productos con costo menor a $100 <strong>filter()</strong>.</li>
+    <li>Ordenar productos alfabéticamente por su nombre <strong>sort()</strong>.</li>
+    <li>Generar un nuevo arreglo solo con los nombres de los productos <strong>map()</strong>.</li>
+    <li>Calcular el precio total con un 10% de descuento en cada producto <strong>reduce()</strong>.</li>
+    <li>Encontrar el primer producto con precio igual o mayor a $10,000 <strong>find()</strong>.</li>
+    <li>Verificar si hay al menos un producto en la categoría "Otro" <strong>some()</strong>.</li>
+    <li>Verificar que todos los productos tienen un precio mayor a cero <strong>every()</strong>.</li>
+    <li>Visualizar la lista de productos <strong>forEach()</strong>.</li>
+    </ul>
+
+    <main>
+        <!-- Tienda Online -->
+        <section aria-labelledby="formulario-productos">  <!-- Dar un poco más de contexto, sobre todo a personas con baja visión que usan ayudas. -->
+            <h3 id="Formulario-productos">Filtro y Orden de Productos de una Tienda Online</h3>
+            <form id="productos-form">
+
+            <!-- Lista de Productos -->
+            <section aria-labelledby="lista-de-productos">
+                <h2 id="Lista-productos">Lista de Productos</h2>
+                <p>Productos que actualmente cuentan con entrega inmediata en esta tienda online:</p>
+                <ul id="lista-productos"></ul>
+
+                <p id="resultados">Puedes presionar los botones con el texto o pregunta en color lila para que se muestren los resultados.</p>
+
+                <section class="producto">
+                    <h4>Obtener productos con costo menor a $100&nbsp;<strong>filter()</strong></h4>
+                    <button type="button" id="filter">Productos con costo menor a $100</button>
+                    <p id="filter-result"></p>
+                </section>
+                
+                <section class="producto">
+                    <h4>Ordenar productos alfabéticamente por su nombre&nbsp;<strong>sort()</strong></h4>
+                    <button type="button" id="sort">Productos ordenados alfabéticamente</button>
+                    <p id="sort-result"></p>
+                </section>
+                
+                <section class="producto">
+                    <h4>Generar un nuevo arreglo solo con los nombres de los productos&nbsp;<strong>map()</strong></h4>
+                    <button type="button" id="map">Lista de nombres de productos</button>
+                    <p id="map-result"></p>
+                </section>
+                
+                <section class="producto">
+                    <h4>Calcular el precio total con un 10% de descuento en cada producto&nbsp;<strong>reduce()</strong></h4>
+                    <button type="button" id="reduce">Precio total con 10% de descuento</button>
+                    <p id="reduce-result"></p>
+                </section>
+                
+                <section class="producto">
+                    <h4>Encontrar el primer producto con precio igual o mayor a $10,000&nbsp;<strong>find()</strong></h4>
+                    <button type="button" id="find">Primer producto con precio de $10,000 o mayor</button>
+                    <p id="find-result"></p>
+                </section>
+                
+                <section class="producto">
+                    <h4>Verificar si hay al menos un producto en la categoría "Otro"&nbsp;<strong>some()</strong></h4>
+                    <button type="button" id="some">¿Hay al menos un producto en la categoría "Otro"?</button>
+                    <p id="some-result"></p>
+                </section>
+                
+                <section class="producto">
+                    <h4>Verificar que todos los productos tienen un precio mayor a cero&nbsp;<strong>every()</strong></h4>
+                    <button type="button" id="every">¿Todos los productos tienen precio?</button>
+                    <p id="every-result"></p>
+                </section>
+                
+                <section class="producto">
+                    <h4>Visualizar la lista de productos&nbsp;<strong>forEach()</strong></h4>
+                    <button type="button" id="forEach">Visualizar lista de productos</button>
+                    <p id="forEach-result"></p>
+                </section>                
+            </form>
+            </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Tienda Online</p>
+    </footer>
+
+    <h3>Pruebas</h3>
+
+    <h4>Lo que podemos ver en la Tienda Online</h4>
+    <p>Vista incial al abrir la página:</p>
+    <figure>
+        <img src="https://i.postimg.cc/JhM2M3sx/1-Vista-preterminada.jpg" alt="Vista preterminada lista">
+        <figcaption>Vista preterminada con lista.</figcaption>
+    </figure>
+
+    <figure>
+        <img src="https://i.postimg.cc/zvbd00Qz/2-Vista-preterminada.jpg" alt="Vista preterminada funciones">
+        <figcaption>Vista preterminada de funciones.</figcaption>
+    </figure>
+
+    <h4>Probando la funcionalidad de los métodos</h4>
+
+    <p>Al presionar un botón, nos muestra el resultado:</p>
+    <figure>
+        <img src="https://i.postimg.cc/hGs3jJxB/3-Presionar-un-bot-n.jpg" alt="Presionar botón">
+        <figcaption>Presionar un botón.</figcaption>
+    </figure>
+
+    <figure>
+        <img src="https://i.postimg.cc/rmpZt8Ct/4-Presionar-un-bot-n.jpg" alt="Resultado presioanr botón">
+        <figcaption>Resultado de presioanr el botón.</figcaption>
+    </figure>
+
+    <h4>Resultados</h4>
+
+    <p>Resultados de todos los botones:</p>
+    <figure>
+        <img src="https://i.postimg.cc/5yhsG8cw/5-Resultados.jpg" alt="Resultados">
+        <figcaption>Resultados.</figcaption>
+    </figure>
+
+    <figure>
+        <img src="https://i.postimg.cc/j5kgHGZ3/6-Resultados.jpg" alt="Resultados forEach">
+        <figcaption>Resultados forEach.</figcaption>
+    </figure>
+
+    <script src="script.js"></script>
+</body>
+</html>
