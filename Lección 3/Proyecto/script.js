@@ -26,7 +26,7 @@ generar una lista con los nombres.
 */
 
 
-//arreglo de objetos (al menos 5 productos), propiedades: nombre, precio y categoría.
+// Arreglo de objetos (al menos 5 productos), propiedades: nombre, precio y categoría.
 const productos = [
     { nombre: "Camiseta", precio: 250, categoria: "Ropa" },
     { nombre: "Laptop", precio: 25000, categoria: "Técnología" },

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Práctica 4</title>
+</head>
+<body>
+    <header>
+        <h1>Práctica 4. Algoritmo de Los 2 Punteros</h1>
+    </header>
+
+    <h2>Problema: Encuentra los Invitados que Pueden Sentarse Juntos.</h2>
+
+    <p>En esta práctica tenemos una lista de invitados. Algunos prefieren sentarse junto a personas cuyos nombres
+        comienzan con la misma letra que el suyo, y podemos:</p>
+    
+    <ul id="datos">
+        <li>Identificar rápidamente el primer par de invitados que pueden sentarse juntos en la cena.</li>
+    </ul>
+
+    <main>
+        <!-- Gestión de Cenas -->
+        <section aria-labelledby="gestion-cenas">  <!-- Dar un poco más de contexto, sobre todo a personas con baja visión que usan ayudas. -->
+            <h3 id="Gestion-cenas">Gestión de Cenas</h3>
+            <form id="cenas-form">
+
+            <!-- Lista de Productos -->
+            <section aria-labelledby="lista-de-invitados">
+                <h2 id="Lista-productos">Lista de Mesas para la Cena</h2>
+                <ul id="lista-productos"></ul>
+
+                <section class="producto">
+                    <h4>Resultados:</h4>
+                    <button type="button" id="resultado">Analizar</button>
+                    <p>Primer pareja de invitados que pueden sentarse juntos:</p>
+                    <ul id="lista-resultados"></ul>
+                </section>             
+            </form>
+            </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Gestión de Cenas</p>
+    </footer>
+
+    <h3>Pruebas</h3>
+
+    <h4>Lo que podemos ver en la Gestión de Cenas</h4>
+    <p>Vista incial al abrir la página:</p>
+    <figure>
+        <img src="https://i.postimg.cc/rsMQMgD9/1-Vista-preterminada.jpg" alt="Vista preterminada mesas">
+        <figcaption>Vista preterminada con mesas de invitados.</figcaption>
+    </figure>
+    <p><strong>Nota:</strong> La mesa 1 está ordenada alfabéticamente,la mesas 2 y 3 no.</p>
+
+    <h4>Resultados</h4>
+
+    <p>Resultados de presionar el botón:</p>
+    <figure>
+        <img src="https://i.postimg.cc/Hnz3x551/2-Presionar-bot-n.jpg" alt="Presionar botón">
+        <figcaption>Presionar el botón.</figcaption>
+    </figure>
+
+    <figure>
+        <img src="https://i.postimg.cc/28j2tcRk/3-Resultados.jpg" alt="Resultados parejas sentadas juntas">
+        <figcaption>Resultados con parejas que pueden sentarse juntas.</figcaption>
+    </figure>
+
+    <script src="script.js"></script>
+</body>
+</html>
