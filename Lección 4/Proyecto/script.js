@@ -15,7 +15,7 @@ Tienes una lista de invitados ordenada alfabéticamente, y tu tarea es organizar
 Sin embargo, algunos invitados prefieren sentarse junto a personas cuyo nombre empieza con la misma letra que el suyo.
 Tu objetivo es encontrar el primer par de invitados consecutivos que puedan sentarse juntos según este criterio.
 
-Instrucciones para resolver el problema:
+    Instrucciones para resolver el problema:
 • Usa un puntero al inicio del arreglo y otro al siguiente elemento.
 • Compara las iniciales de los nombres en las posiciones de ambos punteros.
 • Si coinciden, detén la búsqueda y devuelve los nombres.
@@ -28,6 +28,7 @@ Instrucciones para resolver el problema:
 
 /*
   📌 Código base
+
 const invitados = ["Ana", "Carlos", "Cecilia", "Daniel", "Diana", "Eduardo"];
 
 function encontrarPareja(arr) {

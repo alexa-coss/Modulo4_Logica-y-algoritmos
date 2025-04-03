@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Práctica 5</title>
+</head>
+<body>
+    <header>
+        <h1>Práctica 5. Alineación con Flexbox</h1>
+    </header>
+
+    <h2>Problema: Encontrar la Palabra Más Larga.</h2>
+
+    <p>En esta práctica se ayuda a identificar la palabra más larga o la que tiene mayor número de caracteres en un texto.</p>
+    
+    <ul id="datos">
+        <li>Identificar palabra más larga.</li>
+    </ul>
+
+    <main>
+        <!-- Encontrar la Palabra Más Larga -->
+        <section aria-labelledby="palabra-larga">  <!-- Dar un poco más de contexto, sobre todo a personas con baja visión que usan ayudas. -->
+            <h3 id="Palabra-larga">Encontrar la Palabra Más Larga</h3>
+            <form id="larga-form">
+                <label for="texto">Ingrese el texto que desea analizar:</label>
+                <input type="text" id="texto" placeholder="Texto" required>
+
+                <button type="submit">Analizar texto</button>
+
+                <!-- Lista de libros -->
+                <section aria-labelledby="texto">
+                    <h4 id="Lista-titulo">Texto analizado:</h4>
+
+                    <h4>Palabra con mayor número de caracteres:</h4>
+                </section>           
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Encontrar la Palabra Más Larga</p>
+    </footer>
+
+    <h3>Pruebas</h3>
+
+    <h4>Lo que podemos ver en la Gestión de Cenas</h4>
+    <p>Vista incial al abrir la página:</p>
+    <figure>
+        <img src="" alt="Vista preterminada">
+        <figcaption>Vista preterminada.</figcaption>
+    </figure>
+
+    <h4>Resultados</h4>
+
+    <p>Resultado de presionar el botón:</p>
+    <figure>
+        <img src="" alt="Presionar botón">
+        <figcaption>Presionar el botón.</figcaption>
+    </figure>
+
+    <figure>
+        <img src="" alt="Resultado">
+        <figcaption>Resultado.</figcaption>
+    </figure>
+
+    <script src="script.js"></script>
+</body>
+</html>

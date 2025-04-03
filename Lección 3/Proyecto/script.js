@@ -14,6 +14,7 @@ Eres el encargado de gestionar los datos de una tienda online. Tienes un listado
 como nombre, precio y categoría. Tu tarea será filtrar los productos por precio, ordenarlos alfabéticamente y
 generar una lista con los nombres.
 
+    Instrucciones para resolver el problema:
 • Crea un arreglo de objetos con al menos 5 productos, cada uno con las propiedades nombre, precio y categoría.
     Puedes ver el código de ejemplo para este paso en el siguiente enlace:
     https://gist.github.com/heladio-devf-mx/a2127c7992384fd0fd66893db47ea506
