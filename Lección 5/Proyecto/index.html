@@ -27,17 +27,26 @@
                 <label for="texto">Ingrese el texto que desea analizar:</label>
                 <input type="text" id="texto" placeholder="Texto" required>
 
-                <button type="submit">Analizar texto</button>
-
-                <!-- Lista de libros -->
-                <section aria-labelledby="texto">
-                    <h4 id="Lista-titulo">Texto analizado:</h4>
-
-                    <h4>Palabra con mayor número de caracteres:</h4>
-                </section>           
+                <button type="submit">Analizar texto</button>          
             </form>
         </section>
+
+        <!-- Resultados -->
+        <section aria-labelledby="texto" id="resultados">
+            <h4 id="result">Resultado</h4>
+            <h4>Texto analizado:</h4>
+            <p id="texto-analizado"></p>
+            <h4>Palabra con mayor número de caracteres:</h4>
+            <p id="palabra-larga"></p>
+        </section> 
     </main>
+
+    <section id="modal" class="modal-overlay" style="display: none;">
+        <section class="modal">
+            <p id="modal-text"></p>
+            <button onclick="cerrarModal()">Cerrar</button>  <!-- Cerrar la modal -->
+        </section>
+    </section>
 
     <footer>
         <p>&copy; 2025 Encontrar la Palabra Más Larga</p>
@@ -45,23 +54,30 @@
 
     <h3>Pruebas</h3>
 
-    <h4>Lo que podemos ver en la Gestión de Cenas</h4>
+    <h4>Lo que podemos ver en Encontrar la Palabra Más Larga</h4>
     <p>Vista incial al abrir la página:</p>
     <figure>
-        <img src="" alt="Vista preterminada">
+        <img src="https://i.postimg.cc/GmvcRzR3/1-Vista-preterminada.jpg" alt="Vista preterminada">
         <figcaption>Vista preterminada.</figcaption>
     </figure>
 
-    <h4>Resultados</h4>
+    <h4>Ingresar texto</h4>
+    <p>Texto ingresado:</p>
+    <figure>
+        <img src="https://i.postimg.cc/6QwBpR6r/2-Ingresar-texto.jpg" alt="Texto ingresado">
+        <figcaption>Texto ingresado.</figcaption>
+    </figure>
+
+    <h4>Resultado</h4>
 
     <p>Resultado de presionar el botón:</p>
     <figure>
-        <img src="" alt="Presionar botón">
+        <img src="https://i.postimg.cc/q7L4hRg9/3-Presionar-bot-n.jpg" alt="Presionar botón">
         <figcaption>Presionar el botón.</figcaption>
     </figure>
 
     <figure>
-        <img src="" alt="Resultado">
+        <img src="https://i.postimg.cc/Qtdsp3TV/4-Resultado.jpg" alt="Resultado">
         <figcaption>Resultado.</figcaption>
     </figure>
 

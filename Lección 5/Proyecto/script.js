@@ -58,26 +58,55 @@ const text = "JavaScript es un lenguaje de programación increíble para aprende
 console.log(findLongestWord(text)); // Resultado esperado: "programación"
 */
 
+
+// 
 function findLongestWord(text) {
     // TODO: Dividir el texto en palabras y almacenarlas en una variable
-    // const words = ...
+    const words = text.replace(/[.,!?¿¡:;"(){}\[\]]/g, '').split(' ') // /.../ Caracteres a eliminar | g “global” -> todos los signos, no solo el primero | '' -> Con lo que son reemplazados.
 
     let longestWord = ''; // Inicializar la palabra más larga
 
     // TODO: Recorrer el arreglo de palabras con un ciclo
-    // for (...) {
+    for (let i=0; i < words.length; i++) {
         // TODO: Comparar la longitud de la palabra actual con la más larga
-        // if (...) {
+        if (words[i].length > longestWord.length) {
             // Actualizar la palabra más larga
-            // longestWord = ...;
-        // }
-    // }
+            longestWord = words[i];
+        }
+    }
 
     // TODO: Retornar la palabra más larga encontrada
-    // return ...;
+    return longestWord;
 }
 
 // Ejemplo de uso
 const text = "JavaScript es un lenguaje de programación increíble para aprender.";
+
 // TODO: Llama a la función y muestra el resultado
 console.log(findLongestWord(text)); // Resultado esperado: "programación"
+
+// Capturamos el formulario
+document.getElementById('larga-form').addEventListener('submit', function(event) {
+    event.preventDefault();  // Prevenir el envío del formulario (que se refresque la pantalla)
+
+    // Obtener el valor del del formulario (input)
+    const texto = document.getElementById('texto').value;
+
+    if (texto.trim() === '') {
+        mostrarModal("Por favor, ingresa un texto para analizar.");
+        return;
+    }
+
+    const resultado = findLongestWord(texto);
+
+    // Mostrar sección "resultados"
+    document.getElementById('resultados').style.display = 'block';
+
+    // Actualizar <p>
+    document.getElementById('texto-analizado').textContent = texto;
+    document.getElementById('palabra-larga').textContent = resultado;
+});
+
+function cerrarModal() {
+    document.getElementById('modal').style.display = 'none';
+}
