@@ -34,7 +34,6 @@ en usar recursión para buscar un elemento en un arreglo simple.
 /*
   📌 Código base
 
-// Copy code
 // Lista de regalos
 const gifts = ["Muñeca", "Carro de juguete", "Rompecabezas", "Lego", "Pelota"];
 
@@ -62,20 +61,89 @@ giftToFind = "Camión";
 // "Camión no está en la lista."
 */
 
-// Copy code
+
 // Lista de regalos
-const gifts = ["Muñeca", "Carro de juguete", "Rompecabezas", "Lego", "Pelota"];
+const gifts = ["Muñeca", "Carro de juguete", "Rompecabezas", "Lego", "Pelota", "Parchís", "Bufanda", "Dulces", "Taza"];
+
+// Elementos donde se mostrará el resultado
+const regaloElement = document.getElementById("regalo-navideno");
+const posicionElement = document.getElementById("posicion-arreglo");
+const posicionList = document.getElementById("posicion-regalo");
 
 // TODO: Completa esta función para que busque recursivamente el regalo en la lista
 function findGift(gifts, giftName, index = 0) {
     // Caso base: Si llegamos al final de la lista
     if (index === gifts.length) {
-        return `${giftName} no está en la lista.`;
+        regaloElement.textContent = giftName;
+        posicionElement.textContent = `${giftName} no está en la lista.`;
+        posicionList.textContent = `${giftName} no está en la lista.`;
+        document.getElementById("result").style.display = "block";
+        return;
+    }
+
+    if (gifts[index] === giftName) {
+        regaloElement.textContent = giftName; // Mostrar el nombre del regalo
+        posicionElement.textContent = `${giftName} está en la posición ${index}.`; // Mostrar posición arreglo
+        posicionList.textContent = `${giftName} está en la posición ${index + 1}.`; // Mostrar posición lista
+        document.getElementById("result").style.display = "block";
+        return;
+    } else {
+      return findGift(gifts, giftName, index+1)
     }
   // TODO: Incluye el caso base donde se llega al final de la lista.
   // TODO: Incluye el caso base donde se encuentra el regalo.
   // TODO: Realiza la llamada recursiva para seguir buscando el regalo.
 }
+
+    /* Para html */
+// Mostrar regalos en HTML
+const listaRegalosHTML = document.getElementById('lista-regalos');
+
+// Función para agregar los invitados al HTML
+function agregarRegalos(gifts) {
+    gifts.forEach(gift => {
+        const regaloElemento = document.createElement('li'); // Crear <li> para cada regalo.
+        regaloElemento.textContent = gift; // Establecer el nombre del regalo en el <li>.
+        listaRegalosHTML.appendChild(regaloElemento); // Agregar el <li> a la lista.
+    });
+}
+
+// Llamada a la función para mostrar los regalos
+agregarRegalos(gifts);
+
+// Evento
+document.getElementById('navideno-form').addEventListener('submit', (event) => {
+    event.preventDefault(); // Prevenir el envío del formulario (que se refresque la pantalla)
+
+    // Obtener valores del formulario
+    const giftName = document.getElementById("regalo").value; // .value -> solo obtengo el valor (lo que está dentro del input).
+
+    // Verificar valor vacíos
+    if (!giftName) {
+        mostrarModal('Por favor, selecciona un regalo para buscarlo en la lista.');
+        return;
+    }
+
+    findGift(gifts, giftName);
+    document.getElementById('navideno-form').reset(); // Limpiar el formulario.
+});
+
+// Función para mostrar el modal con el mensaje
+const mostrarModal = (mensaje) => {
+    const modal = document.getElementById('modal');
+    const modalText = document.getElementById('modal-text');
+
+    modalText.textContent = mensaje; // Establecer mensaje.
+    modal.style.display = 'block'; // Mostrar modal.
+};
+
+// Función para cerrar el modal
+const cerrarModal = () => {
+    const modal = document.getElementById('modal');
+    modal.style.display = 'none'; // Ocultar modal.
+};
+
+/*
 // Casos de ejemplo:
 // Llama a la función con los datos de entrada y muestra el resultado en la consola.
 // Llama a la función y prueba con diferentes regalos
@@ -86,5 +154,7 @@ console.log(findGift(gifts, giftToFind));
 
 // Caso cuando el regalo no está en la lista
 giftToFind = "Camión";
+console.log(findGift(gifts, giftToFind));
 // Salida esperada:
 // "Camión no está en la lista."
+*/

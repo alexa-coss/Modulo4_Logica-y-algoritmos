@@ -13,55 +13,102 @@
 
     <h2>Problema: Buscar un objeto en una lista de regalos.</h2>
 
-    <p>En esta práctica se ayuda a identificar la palabra más larga o la que tiene mayor número de caracteres en un texto.</p>
+    <p>En esta práctica se buscará un regalo específico de la lista de regalos navideños familiar.</p>
     
     <ul id="datos">
-        <li>Identificar palabra más larga.</li>
+        <li>Buscar un regalo en una lista.</li>
     </ul>
 
     <main>
-        <!-- Encontrar la Palabra Más Larga -->
-        <section aria-labelledby="palabra-larga">  <!-- Dar un poco más de contexto, sobre todo a personas con baja visión que usan ayudas. -->
-            <h3 id="Palabra-larga">Encontrar la Palabra Más Larga</h3>
-            <form id="larga-form">
-                <label for="texto">Ingrese el texto que desea analizar:</label>
-                <input type="text" id="texto" placeholder="Texto" required>
+        <!-- Buscar un objeto en una lista de regalos -->
+        <section aria-labelledby="objeto-navideno">  <!-- Dar un poco más de contexto, sobre todo a personas con baja visión que usan ayudas. -->
+            <h3 id="Objeto-navideno">Buscar un objeto en una lista de regalos</h3>
+            <form id="navideno-form">
+                <h2 id="Lista-regalos">Lista de regalos navideños</h2>
+                <ul id="lista-regalos"></ul>
 
-                <button type="submit">Analizar texto</button>
+                <label for="nombre">¿Qué regalo buscas?</label>
+                <input type="text" id="regalo" required>
 
-                <!-- Lista de libros -->
-                <section aria-labelledby="texto">
-                    <h4 id="Lista-titulo">Texto analizado:</h4>
-
-                    <h4>Palabra con mayor número de caracteres:</h4>
-                </section>           
+                <button type="submit">Encontrar regalo</button>
             </form>
+        </section>
+
+        <!-- Resultado -->
+        <section aria-labelledby="texto" id="result">
+            <h4 id="resultado">Resultado</h4>
+            <h4>Regalo buscado:</h4>
+            <p id="regalo-navideno"></p>
+            <h4>Posición arreglo:</h4>
+            <p id="posicion-arreglo"></p>
+            <h4 id="posicion">Posición lista:</h4>
+            <p id="posicion-regalo"></p>
+            <p id="nota"><strong>Nota:</strong> Recordar que se da la posición del arreglo y estos comienzan en cero.</p>
         </section>
     </main>
 
+    <section id="modal" class="modal-overlay" style="display: none;">
+        <section class="modal">
+            <p id="modal-text"></p>
+            <button onclick="cerrarModal()">Cerrar</button>  <!-- Cerrar la modal -->
+        </section>
+    </section>
+
     <footer>
-        <p>&copy; 2025 Encontrar la Palabra Más Larga</p>
+        <p>&copy; 2025 Buscar un objeto en una lista de regalos</p>
     </footer>
 
     <h3>Pruebas</h3>
 
-    <h4>Lo que podemos ver en la Gestión de Cenas</h4>
+    <h4>Lo que podemos ver en Encontrar la Palabra Más Larga</h4>
     <p>Vista incial al abrir la página:</p>
     <figure>
-        <img src="" alt="Vista preterminada">
+        <img src="https://i.postimg.cc/T2y3xHnC/1-Vista-preterminada.jpg" alt="Vista preterminada">
         <figcaption>Vista preterminada.</figcaption>
     </figure>
 
-    <h4>Resultados</h4>
+    <h4>Probando la funcionalidad del buscador</h4>
 
-    <p>Resultado de presionar el botón:</p>
+    <p>Buscar sin indicar regalo:</p>
     <figure>
-        <img src="" alt="Presionar botón">
-        <figcaption>Presionar el botón.</figcaption>
+        <img src="https://i.postimg.cc/8kqPzBHD/2-Presionar-bot-n-sin-regalo.jpg" alt="Presionar botón sin regalo">
+        <figcaption>Presionar el botón sin seleccionar regalo.</figcaption>
     </figure>
 
     <figure>
-        <img src="" alt="Resultado">
+        <img src="https://i.postimg.cc/jdPqwwgf/3-Mensaje-completar-campo.jpg" alt="Mensaje completar campo">
+        <figcaption>Mensaje de completar campo.</figcaption>
+    </figure>
+
+    <p>Indicar y buscar regalo con un error:</p>
+    <figure>
+        <img src="https://i.postimg.cc/mDPBbt1t/7-Ingresar-regalo-err-neo.jpg" alt="Indicar regalo erróneo.">
+        <figcaption>Indicar regalo erróneo para buscarlo.</figcaption>
+    </figure>
+
+    <figure>
+        <img src="https://i.postimg.cc/RhfmHyRm/2-Presionar-bot-n-regalo-err-neo.jpg" alt="Presionar botón">
+        <figcaption>Presionar el botón.</figcaption>
+    </figure>
+    
+    <figure>
+        <img src="https://i.postimg.cc/C19YdSbJ/6-Resultado-regalo-err-neo.jpg" alt="Resultado regalo erróneo">
+        <figcaption>Resultado de buscar regalo erróneo.</figcaption>
+    </figure>
+
+    <p>Indicar y buscar regalo:</p>
+    <figure>
+        <img src="https://i.postimg.cc/pLB2kNtX/4-Ingresar-regalo.jpg" alt="Indicar regalo.">
+        <figcaption>Indicar regalo para buscarlo.</figcaption>
+    </figure>
+
+    <figure>
+        <img src="https://i.postimg.cc/QdD8p8wy/5-Presionar-bot-n.jpg" alt="Presionar botón">
+        <figcaption>Presionar el botón.</figcaption>
+    </figure>
+    
+    <figure>
+        <img src="https://i.postimg.cc/nLcnPdHK/6-Resultado.jpg" alt="Resultado">
         <figcaption>Resultado.</figcaption>
     </figure>
 

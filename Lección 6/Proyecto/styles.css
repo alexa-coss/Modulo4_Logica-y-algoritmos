@@ -70,12 +70,21 @@ fieldset {
     padding: 10px;
 }
 
+#lista-regalos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 0;
+    list-style: none;
+    justify-items: center; /* Centrar items dentro de su celda */
+}
+
 button {
     background-color: transparent;
     color: var(--primary-color);
     border: 2px solid var(--secondary-color);
     padding: 0.75rem;
-    width: 8rem;
+    width: 10rem;
     border-radius: 0.5rem;
     cursor: pointer;
     font-size: 1rem;
@@ -102,6 +111,36 @@ ul#datos li {
     text-align: center;
 }
 
+/* Estilo de la lista de regalo */
+ul#lista-regalos {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* 2 columnas de igual tamaño */
+    gap: 0.8rem; /* Espacio entre cada tarjeta de regalo */
+    padding: 0;
+    margin: 0;
+}
+
+/* Tarjeta de regalo */
+ul#lista-regalos li {
+    background-color: var(--buttonCopy-color);
+    padding: 1.2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row; /* Disposición en fila para cada tarjeta */
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 11rem;
+    height: 3rem;
+}
+
+/* Al pasar sobre regalo */
+ul#lista-regalos li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
 img {
     border: 0.2rem solid var(--secondary-color);
     margin-top: 0.5rem;
@@ -118,4 +157,153 @@ figcaption {
 h4 {
     color: var(--primary-color);
     display: inline-flex;
+}
+
+#result {
+    display: none; /* No visible, no ocupa espacio */
+}
+
+#result h4 {
+    display: block; /* Una línea */
+    margin-top: 1.5rem;
+}
+
+#resultado {
+    margin-top: 0 !important;
+}
+
+/* Estilo texto */
+#objeto-navideno {
+    display: flex;
+    flex-direction: column; /* Disposición en columnas */
+    gap: 0.8rem; /* Espacio entre cada tarjeta de producto */
+    padding: 0;
+    margin: 0;
+    margin-top: 0.5rem;
+    justify-content: center;
+}
+
+/* Tarjeta de texto */
+#lista-regalos li, #objeto-navideno {
+    background-color: var(--buttonCopy-color);
+    padding: 1.2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row; /* Disposición en fila para cada tarjeta */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+}
+
+/* Al pasar sobre texto */
+#lista-regalos li, #objeto-navideno {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Tarjeta de palabra */
+#lista-regalos li, #objeto-navideno {
+    width: 11rem; /* Ancho definido del contenedor */
+    margin: 0 auto;
+    margin-top: 0.5rem;
+}
+
+#result {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    margin: 0.5rem 0 1.5rem;
+}
+
+/* Estilo texto */
+#regalo-navideno, #posicion-arreglo, #posicion-regalo {
+    display: flex;
+    flex-direction: column; /* Disposición en columnas */
+    gap: 0.8rem; /* Espacio entre cada tarjeta de producto */
+    padding: 0;
+    margin: 0;
+    margin-top: 0.5rem;
+    justify-content: center;
+}
+
+/* Tarjeta de texto */
+#regalo-navideno,#posicion-arreglo, #posicion-regalo {
+    background-color: var(--buttonCopy-color);
+    padding: 1.2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row; /* Disposición en fila para cada tarjeta */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 100%;
+    width: 12rem;
+}
+
+/* Al pasar sobre texto */
+#regalo-navideno, #posicion-arreglo, #posicion-regalo {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+#posicion-arreglo, #posicion-regalo {
+    width: 24rem;
+}
+
+section#result #posicion {
+    margin-top: 0.5rem;
+    padding: 0;
+}
+
+#nota {
+    margin-top: 1rem;
+}
+
+    /* Modal */
+/* Capa de fondo */
+.modal-overlay {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Lo fija en la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para dar efecto de oscurecer la página */
+    z-index: 1000; /* Asegura que está encima de otros elementos */
+}
+
+/* Ventana */
+.modal {
+    position: fixed; /* Lo fija en la pantalla */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Ajusta posición para centrado perfecto */
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1001; /* Asegura que está encima de otros elementos */
+    width: 350px;
+    max-width: 90%;
+    text-align: center;
+}
+
+/* Estilos para el texto dentro del modal */
+#modal-text {
+    margin-bottom: 20px;
+}
+
+/* Estilos para el botón de cerrar */
+.modal button {
+    padding: 10px 15px;
+    background-color: var(--hooverCopy-color);
+    color: white;
+    border: none; 
+    border-radius: 5px;
+    cursor: pointer; /* Cambia el cursor a mano */
+    font-size: 16px;
+}
+
+.modal button:hover {
+    background-color: var(--buttonCopy-color);
 }
