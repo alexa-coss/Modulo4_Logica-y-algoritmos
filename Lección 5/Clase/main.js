@@ -5,18 +5,21 @@ function timer(n) {
         return;
     }
     setTimeout(() => {
-        timer(n-1);
+        timer(n - 1);
     }, 1000)
     console.log(n)
 }
 
 timer(5);
 
+/* console.log(timer(5)); */
+
+
 
 // Sumatoria
 function sum(n) {
     if (n === 10) return 0;
-    return n + sum(n+1)
+    return n + sum(n + 1)
 }
 
 console.log(sum(5));
@@ -25,7 +28,7 @@ console.log(sum(5));
 // Factorial
 function factorial(n) {
     if (n === 0) return 1;
-        return n*factorial(n-1)
+        return n*factorial(n - 1)
 }
 
 console.log("Factorial: ", factorial(5));
@@ -130,29 +133,33 @@ function isPalindrome(str) {
 console.log("Es palindromo: ", isPalindrome(("anita lava la tina").replaceAll(" ","")));
 
 
-// 
+
+// Verificar si hay una pareja con suma igual a un número dado en un arreglo ordenado
 function tieneParconSuma(arr, target) {
     let left = 0;
     let right = arr.length;
 
     while (left < right) {
-        const sum = arr[left] + arr [right];
+        const sum = arr[left] + arr[right];
         if (sum === target) return true;
-        if ( sum < target) left++;
+        if (sum < target) left++;
         else right--;
     }
     return false;
 }
 
-const arreglo=[1,2,3,4,5,6];
+const arreglo = [1, 2, 3, 4, 5, 6];
 
+console.log("Suma par arreglo: ", tieneParconSuma(arreglo, 12));
 console.log("Suma par arreglo: ", tieneParconSuma(arreglo, 6));
+
 
 
 /*
     📌 Ejercio 1. Encontrar un duplicado.
     📌 Ejercio 2. Voltear una cadena.
 */
+
 
 
 /*
