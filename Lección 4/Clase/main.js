@@ -16,7 +16,7 @@ const linearSearch = (arreglo, target) => {
 // Búsqueda Binaria: O(log n) (solo con arrays ordenados)
 const binarySearch = (arreglo, target) => {
     let _left = 0;
-    let _right = arreglo.length-1;
+    let _right = arreglo.length - 1;
 
     while (_left <= _right){
         const mid = Math.floor((_left + _right) / 2);
@@ -46,11 +46,11 @@ const binarySearchR = (arreglo, target, _left=0, _right = arreglo.length-1) => {
 
     // Busco solo del lado derecho
     if (arreglo[mid] < target) {
-        return binarySearchR(arreglo, target, mid+1, _right);
+        return binarySearchR(arreglo, target, mid + 1, _right);
     }
 
     // Solo busco del lado izquierdo
-    return binarySearchR(arreglo, target, _left, mid-1);
+    return binarySearchR(arreglo, target, _left, mid - 1);
 }
 
 console.time('lineal');
