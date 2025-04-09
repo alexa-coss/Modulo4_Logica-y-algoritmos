@@ -1,6 +1,7 @@
 // ---- Clase principal que representa un viaje ----
 class Viaje {
     constructor(nombre, origen, destino, duracion, pais) {
+        // Guardamos los datos principales del viaje
         this.nombre = nombre;
         this.origen = origen;
         this.destino = destino;
@@ -57,6 +58,8 @@ objViaje.agregarTarea("Reservar Automóvil");
 objViaje.eliminarTarea("Llamar a reservar al hotel Holiday Inn");
 objViaje.mostrarResumen();
 */
+
+// ---- Funciones para guardar y cargar datos (persistencia en localStorage) ----
 
 // Carga los viajes almacenados y los convierte nuevamente a objetos de tipo "Viaje"
 const cargarViajes = () => {
