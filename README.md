@@ -70,9 +70,10 @@ Problema: Gestor de Notas Personales.
 
 - Repositorio: [https://github.com/alexa-coss/StarbucksCopy.git](https://github.com/alexa-coss/Modulo3_JavaScript-desde-Cero).
 
+
 ## Comentarios
 
-
+Poner en práctica todos los conociminetos adquiridos al final del módulo fue un buen reto, intenté crear la página en GitHub Pages y al final mejor cree un repositorio exclusivamente para el proyecto.
 
 
 # Sobre mí
