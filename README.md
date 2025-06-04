@@ -68,12 +68,13 @@ Problema: Gestor de Notas Personales.
 
 ### Entregables
 
-- Repositorio: [https://github.com/alexa-coss/Modulo3_JavaScript-desde-Cero](https://github.com/alexa-coss/Modulo4_Logica-y-algoritmos).
+- Repositorio: [https://github.com/alexa-coss/Modulo4_Logica-y-algoritmos](https://github.com/alexa-coss/Modulo4_Logica-y-algoritmos).
 
 
 ## Comentarios
 
 Poner en práctica todos los conociminetos adquiridos al final del módulo fue un buen reto, intenté crear la página en GitHub Pages y al final mejor cree un repositorio exclusivamente para el proyecto.
+[https://github.com/alexa-coss/Buscador_de_Recetas_Inteligente](https://github.com/alexa-coss/Buscador_de_Recetas_Inteligente).
 
 
 # Sobre mí
