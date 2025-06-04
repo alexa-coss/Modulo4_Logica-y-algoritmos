@@ -3,7 +3,7 @@
 
 # Lógica y Algoritmos
 
-En esté repositorio se encuentra todo lo realizado durante el módulo tres, se divide en ocho lecciones, las cuales pueden tener principlamente:
+En esté repositorio se encuentra todo lo realizado durante el módulo cuatro, se divide en ocho lecciones, las cuales pueden tener principlamente:
 - Lo visto en clase.
 - Ejemplos y ejercicios de lecturas.
 - Proyecto correspondiente a la lección.
@@ -68,7 +68,7 @@ Problema: Gestor de Notas Personales.
 
 ### Entregables
 
-- Repositorio: [https://github.com/alexa-coss/StarbucksCopy.git](https://github.com/alexa-coss/Modulo3_JavaScript-desde-Cero).
+- Repositorio: [https://github.com/alexa-coss/Modulo3_JavaScript-desde-Cero](https://github.com/alexa-coss/Modulo4_Logica-y-algoritmos).
 
 
 ## Comentarios
